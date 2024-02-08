@@ -1,0 +1,670 @@
+[0m12:10:33.661482 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c95280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e25f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e189b0>]}
+
+
+============================== 12:10:33.663936 | dee32209-42cb-46f2-a568-06ecc0b9e9d5 ==============================
+[0m12:10:33.663936 [info ] [MainThread]: Running with dbt=1.7.7
+[0m12:10:33.664269 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'version_check': 'True', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m12:10:33.664626 [info ] [MainThread]: dbt version: 1.7.7
+[0m12:10:33.664783 [info ] [MainThread]: python version: 3.12.2
+[0m12:10:33.664923 [info ] [MainThread]: python path: /Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/bin/python3.12
+[0m12:10:33.665075 [info ] [MainThread]: os info: macOS-12.5-arm64-arm-64bit
+[0m12:10:33.797814 [info ] [MainThread]: Using profiles dir at /Users/victorberrozpe/.dbt
+[0m12:10:33.798089 [info ] [MainThread]: Using profiles.yml file at /Users/victorberrozpe/.dbt/profiles.yml
+[0m12:10:33.798270 [info ] [MainThread]: Using dbt_project.yml file at /Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/dbt_project.yml
+[0m12:10:33.798520 [info ] [MainThread]: adapter type: bigquery
+[0m12:10:33.798679 [info ] [MainThread]: adapter version: 1.7.4
+[0m12:10:33.828272 [info ] [MainThread]: Configuration:
+[0m12:10:33.828488 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:10:33.828644 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:10:33.828799 [info ] [MainThread]: Required dependencies:
+[0m12:10:33.828982 [debug] [MainThread]: Executing "git --help"
+[0m12:10:33.837230 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:10:33.837703 [debug] [MainThread]: STDERR: "b''"
+[0m12:10:33.837907 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:10:33.838070 [info ] [MainThread]: Connection:
+[0m12:10:33.838264 [info ] [MainThread]:   method: service-account
+[0m12:10:33.838417 [info ] [MainThread]:   database: astrafy-sandbox-victor
+[0m12:10:33.838548 [info ] [MainThread]:   execution_project: astrafy-sandbox-victor
+[0m12:10:33.838676 [info ] [MainThread]:   schema: dbt_testing_dataset
+[0m12:10:33.838802 [info ] [MainThread]:   location: EU
+[0m12:10:33.838927 [info ] [MainThread]:   priority: interactive
+[0m12:10:33.839055 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m12:10:33.839179 [info ] [MainThread]:   impersonate_service_account: None
+[0m12:10:33.839308 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m12:10:33.839431 [info ] [MainThread]:   job_retries: 1
+[0m12:10:33.839555 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m12:10:33.839679 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m12:10:33.839804 [info ] [MainThread]:   keyfile: /Users/victorberrozpe/Documents/service account keys/astrafy-sandbox-victor-8d0687c06102.json
+[0m12:10:33.839932 [info ] [MainThread]:   timeout_seconds: 300
+[0m12:10:33.840055 [info ] [MainThread]:   refresh_token: None
+[0m12:10:33.840178 [info ] [MainThread]:   client_id: None
+[0m12:10:33.840300 [info ] [MainThread]:   token_uri: None
+[0m12:10:33.840421 [info ] [MainThread]:   dataproc_region: None
+[0m12:10:33.840540 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m12:10:33.840660 [info ] [MainThread]:   gcs_bucket: None
+[0m12:10:33.840777 [info ] [MainThread]:   dataproc_batch: None
+[0m12:10:33.841031 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m12:10:33.843372 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m12:10:33.843928 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:10:33.845138 [debug] [MainThread]: On debug: select 1 as id
+[0m12:10:34.337004 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:EU:cec30086-be24-449b-ba78-e27adf33f29b&page=queryresults
+[0m12:10:34.707528 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:10:34.708902 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:10:34.710870 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.0705216, "process_user_time": 0.997685, "process_kernel_time": 0.087354, "process_mem_max_rss": "131776512", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:10:34.711752 [debug] [MainThread]: Command `dbt debug` succeeded at 12:10:34.711567 after 1.07 seconds
+[0m12:10:34.712240 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:10:34.712711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104e18c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105abab10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104860350>]}
+[0m12:10:34.713236 [debug] [MainThread]: Flushing usage events
+[0m12:10:38.819461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10898be60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1081edf70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089f8e00>]}
+
+
+============================== 12:10:38.821833 | bef159b3-3d2b-4802-9f1a-a4f2104b74c2 ==============================
+[0m12:10:38.821833 [info ] [MainThread]: Running with dbt=1.7.7
+[0m12:10:38.822151 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'version_check': 'True', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:10:38.991636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108bdd610>]}
+[0m12:10:39.025332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109082c60>]}
+[0m12:10:39.025675 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m12:10:39.032880 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m12:10:39.033263 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:10:39.033472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089bf350>]}
+[0m12:10:39.491958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109aa8680>]}
+[0m12:10:39.495560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097e6420>]}
+[0m12:10:39.495778 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m12:10:39.495972 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094632c0>]}
+[0m12:10:39.496728 [info ] [MainThread]: 
+[0m12:10:39.497118 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:10:39.497684 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_astrafy-sandbox-victor'
+[0m12:10:39.497909 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:10:39.902802 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor, now list_astrafy-sandbox-victor_dbt_testing_dataset)
+[0m12:10:39.904076 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:10:40.323870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a9bb30>]}
+[0m12:10:40.326544 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:10:40.327154 [info ] [MainThread]: 
+[0m12:10:40.330893 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_first_dbt_model
+[0m12:10:40.331472 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_testing_dataset.my_first_dbt_model ............ [RUN]
+[0m12:10:40.332286 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor_dbt_testing_dataset, now model.dbt_core_demo.my_first_dbt_model)
+[0m12:10:40.332689 [debug] [Thread-1 (]: Began compiling node model.dbt_core_demo.my_first_dbt_model
+[0m12:10:40.339838 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_core_demo.my_first_dbt_model"
+[0m12:10:40.340866 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (compile): 12:10:40.332947 => 12:10:40.340638
+[0m12:10:40.341205 [debug] [Thread-1 (]: Began executing node model.dbt_core_demo.my_first_dbt_model
+[0m12:10:40.368444 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_core_demo.my_first_dbt_model"
+[0m12:10:40.369037 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:10:40.369986 [debug] [Thread-1 (]: On model.dbt_core_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m12:10:40.744311 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:EU:c10285ab-6b4c-4cc7-8e55-55926c7cbd81&page=queryresults
+[0m12:10:40.748357 [debug] [Thread-1 (]: BigQuery adapter: Unhandled error while running:
+/* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m12:10:40.749671 [debug] [Thread-1 (]: BigQuery adapter: 404 Not found: Dataset astrafy-sandbox-victor:dbt_testing_dataset was not found in location EU; reason: notFound, message: Not found: Dataset astrafy-sandbox-victor:dbt_testing_dataset was not found in location EU
+
+Location: EU
+Job ID: c10285ab-6b4c-4cc7-8e55-55926c7cbd81
+
+[0m12:10:40.750448 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (execute): 12:10:40.341412 => 12:10:40.750132
+[0m12:10:40.766792 [debug] [Thread-1 (]: Runtime Error in model my_first_dbt_model (models/example/my_first_dbt_model.sql)
+  404 Not found: Dataset astrafy-sandbox-victor:dbt_testing_dataset was not found in location EU; reason: notFound, message: Not found: Dataset astrafy-sandbox-victor:dbt_testing_dataset was not found in location EU
+  
+  Location: EU
+  Job ID: c10285ab-6b4c-4cc7-8e55-55926c7cbd81
+  
+[0m12:10:40.767356 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bef159b3-3d2b-4802-9f1a-a4f2104b74c2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096b9250>]}
+[0m12:10:40.767978 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model dbt_testing_dataset.my_first_dbt_model ... [[31mERROR[0m in 0.44s]
+[0m12:10:40.768558 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_first_dbt_model
+[0m12:10:40.769306 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_second_dbt_model
+[0m12:10:40.769769 [info ] [Thread-1 (]: 2 of 2 SKIP relation dbt_testing_dataset.my_second_dbt_model ................... [[33mSKIP[0m]
+[0m12:10:40.770282 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_second_dbt_model
+[0m12:10:40.771651 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:10:40.771919 [debug] [MainThread]: Connection 'model.dbt_core_demo.my_first_dbt_model' was properly closed.
+[0m12:10:40.772192 [info ] [MainThread]: 
+[0m12:10:40.772468 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 1.28 seconds (1.28s).
+[0m12:10:40.773058 [debug] [MainThread]: Command end result
+[0m12:10:40.778911 [info ] [MainThread]: 
+[0m12:10:40.779208 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m12:10:40.779436 [info ] [MainThread]: 
+[0m12:10:40.779677 [error] [MainThread]:   Runtime Error in model my_first_dbt_model (models/example/my_first_dbt_model.sql)
+  404 Not found: Dataset astrafy-sandbox-victor:dbt_testing_dataset was not found in location EU; reason: notFound, message: Not found: Dataset astrafy-sandbox-victor:dbt_testing_dataset was not found in location EU
+  
+  Location: EU
+  Job ID: c10285ab-6b4c-4cc7-8e55-55926c7cbd81
+  
+[0m12:10:40.779910 [info ] [MainThread]: 
+[0m12:10:40.780156 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m12:10:40.780994 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 1.9833597, "process_user_time": 1.732992, "process_kernel_time": 0.108944, "process_mem_max_rss": "148094976", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:10:40.781326 [debug] [MainThread]: Command `dbt run` failed at 12:10:40.781248 after 1.98 seconds
+[0m12:10:40.781581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089f8e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096b9250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b14a40>]}
+[0m12:10:40.781823 [debug] [MainThread]: Flushing usage events
+[0m12:12:30.322081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107584b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075f4cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075f48f0>]}
+
+
+============================== 12:12:30.324494 | 2f8668fb-f061-41ce-9e35-ca6f23d9f698 ==============================
+[0m12:12:30.324494 [info ] [MainThread]: Running with dbt=1.7.7
+[0m12:12:30.324815 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'version_check': 'True', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:12:30.325162 [info ] [MainThread]: dbt version: 1.7.7
+[0m12:12:30.325320 [info ] [MainThread]: python version: 3.12.2
+[0m12:12:30.325467 [info ] [MainThread]: python path: /Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/bin/python3.12
+[0m12:12:30.325626 [info ] [MainThread]: os info: macOS-12.5-arm64-arm-64bit
+[0m12:12:30.458587 [info ] [MainThread]: Using profiles dir at /Users/victorberrozpe/.dbt
+[0m12:12:30.458853 [info ] [MainThread]: Using profiles.yml file at /Users/victorberrozpe/.dbt/profiles.yml
+[0m12:12:30.459019 [info ] [MainThread]: Using dbt_project.yml file at /Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/dbt_project.yml
+[0m12:12:30.459261 [info ] [MainThread]: adapter type: bigquery
+[0m12:12:30.459419 [info ] [MainThread]: adapter version: 1.7.4
+[0m12:12:30.489655 [info ] [MainThread]: Configuration:
+[0m12:12:30.489855 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m12:12:30.490009 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m12:12:30.490152 [info ] [MainThread]: Required dependencies:
+[0m12:12:30.490322 [debug] [MainThread]: Executing "git --help"
+[0m12:12:30.498863 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m12:12:30.499333 [debug] [MainThread]: STDERR: "b''"
+[0m12:12:30.499592 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m12:12:30.499747 [info ] [MainThread]: Connection:
+[0m12:12:30.499938 [info ] [MainThread]:   method: service-account
+[0m12:12:30.500077 [info ] [MainThread]:   database: astrafy-sandbox-victor
+[0m12:12:30.500208 [info ] [MainThread]:   execution_project: astrafy-sandbox-victor
+[0m12:12:30.500330 [info ] [MainThread]:   schema: dbt_testing_dataset
+[0m12:12:30.500469 [info ] [MainThread]:   location: europe-west1
+[0m12:12:30.500592 [info ] [MainThread]:   priority: interactive
+[0m12:12:30.500715 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m12:12:30.500847 [info ] [MainThread]:   impersonate_service_account: None
+[0m12:12:30.500970 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m12:12:30.501092 [info ] [MainThread]:   job_retries: 1
+[0m12:12:30.501213 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m12:12:30.501337 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m12:12:30.501460 [info ] [MainThread]:   keyfile: /Users/victorberrozpe/Documents/service account keys/astrafy-sandbox-victor-8d0687c06102.json
+[0m12:12:30.501586 [info ] [MainThread]:   timeout_seconds: 300
+[0m12:12:30.501714 [info ] [MainThread]:   refresh_token: None
+[0m12:12:30.501833 [info ] [MainThread]:   client_id: None
+[0m12:12:30.501952 [info ] [MainThread]:   token_uri: None
+[0m12:12:30.502074 [info ] [MainThread]:   dataproc_region: None
+[0m12:12:30.502194 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m12:12:30.502312 [info ] [MainThread]:   gcs_bucket: None
+[0m12:12:30.502426 [info ] [MainThread]:   dataproc_batch: None
+[0m12:12:30.502658 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m12:12:30.504981 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m12:12:30.505450 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:12:30.506637 [debug] [MainThread]: On debug: select 1 as id
+[0m12:12:33.637227 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:e2c89bab-82d2-42d6-a4a3-94b3441c1109&page=queryresults
+[0m12:12:34.038512 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m12:12:34.039970 [info ] [MainThread]: [32mAll checks passed![0m
+[0m12:12:34.042994 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.741981, "process_user_time": 1.013249, "process_kernel_time": 0.089016, "process_mem_max_rss": "133070848", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:12:34.044898 [debug] [MainThread]: Command `dbt debug` succeeded at 12:12:34.044425 after 3.74 seconds
+[0m12:12:34.045832 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m12:12:34.046909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075f4cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ca3590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103dfbef0>]}
+[0m12:12:34.048078 [debug] [MainThread]: Flushing usage events
+[0m12:12:47.550423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b61280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064b1f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ce5010>]}
+
+
+============================== 12:12:47.552860 | d333c369-54e4-4d64-a0de-bb8f5c6bd98f ==============================
+[0m12:12:47.552860 [info ] [MainThread]: Running with dbt=1.7.7
+[0m12:12:47.553195 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:12:47.725530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a63ad0>]}
+[0m12:12:47.759301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a1bfb0>]}
+[0m12:12:47.759632 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m12:12:47.766804 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m12:12:47.799855 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m12:12:47.800164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c99460>]}
+[0m12:12:48.232894 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cfafc0>]}
+[0m12:12:48.236561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cd8fb0>]}
+[0m12:12:48.236781 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m12:12:48.236970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107d2f950>]}
+[0m12:12:48.237746 [info ] [MainThread]: 
+[0m12:12:48.238144 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:12:48.238712 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_astrafy-sandbox-victor'
+[0m12:12:48.238947 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:12:48.676937 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor, now list_astrafy-sandbox-victor_dbt_testing_dataset)
+[0m12:12:48.677806 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:12:49.022185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079a5b80>]}
+[0m12:12:49.023654 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:12:49.024146 [info ] [MainThread]: 
+[0m12:12:49.027386 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_first_dbt_model
+[0m12:12:49.028244 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_testing_dataset.my_first_dbt_model ............ [RUN]
+[0m12:12:49.029266 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor_dbt_testing_dataset, now model.dbt_core_demo.my_first_dbt_model)
+[0m12:12:49.029812 [debug] [Thread-1 (]: Began compiling node model.dbt_core_demo.my_first_dbt_model
+[0m12:12:49.038011 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_core_demo.my_first_dbt_model"
+[0m12:12:49.038988 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (compile): 12:12:49.030126 => 12:12:49.038710
+[0m12:12:49.039409 [debug] [Thread-1 (]: Began executing node model.dbt_core_demo.my_first_dbt_model
+[0m12:12:49.067893 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_core_demo.my_first_dbt_model"
+[0m12:12:49.068360 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:12:49.069361 [debug] [Thread-1 (]: On model.dbt_core_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m12:12:49.769359 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:00f06674-6d2c-4eac-8939-ddd90266923f&page=queryresults
+[0m12:12:49.772675 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:00f06674-6d2c-4eac-8939-ddd90266923f&page=queryresults
+[0m12:12:49.773817 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (execute): 12:12:49.039640 => 12:12:49.773296
+[0m12:12:49.782765 [debug] [Thread-1 (]: Database Error in model my_first_dbt_model (models/example/my_first_dbt_model.sql)
+  Access Denied: Dataset astrafy-sandbox-victor:dbt_testing_dataset: Permission bigquery.tables.create denied on dataset astrafy-sandbox-victor:dbt_testing_dataset (or it may not exist).
+  compiled Code at target/run/dbt_core_demo/models/example/my_first_dbt_model.sql
+[0m12:12:49.783402 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd333c369-54e4-4d64-a0de-bb8f5c6bd98f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107a61700>]}
+[0m12:12:49.784122 [error] [Thread-1 (]: 1 of 2 ERROR creating sql table model dbt_testing_dataset.my_first_dbt_model ... [[31mERROR[0m in 0.75s]
+[0m12:12:49.784771 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_first_dbt_model
+[0m12:12:49.785756 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_second_dbt_model
+[0m12:12:49.786307 [info ] [Thread-1 (]: 2 of 2 SKIP relation dbt_testing_dataset.my_second_dbt_model ................... [[33mSKIP[0m]
+[0m12:12:49.786789 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_second_dbt_model
+[0m12:12:49.788253 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:12:49.788548 [debug] [MainThread]: Connection 'model.dbt_core_demo.my_first_dbt_model' was properly closed.
+[0m12:12:49.788836 [info ] [MainThread]: 
+[0m12:12:49.789120 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 1.55 seconds (1.55s).
+[0m12:12:49.789729 [debug] [MainThread]: Command end result
+[0m12:12:49.796405 [info ] [MainThread]: 
+[0m12:12:49.796724 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m12:12:49.796964 [info ] [MainThread]: 
+[0m12:12:49.797203 [error] [MainThread]:   Database Error in model my_first_dbt_model (models/example/my_first_dbt_model.sql)
+  Access Denied: Dataset astrafy-sandbox-victor:dbt_testing_dataset: Permission bigquery.tables.create denied on dataset astrafy-sandbox-victor:dbt_testing_dataset (or it may not exist).
+  compiled Code at target/run/dbt_core_demo/models/example/my_first_dbt_model.sql
+[0m12:12:49.797449 [info ] [MainThread]: 
+[0m12:12:49.797697 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=1 TOTAL=2
+[0m12:12:49.798638 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 2.2707398, "process_user_time": 1.740575, "process_kernel_time": 0.110848, "process_mem_max_rss": "149307392", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:12:49.799013 [debug] [MainThread]: Command `dbt run` failed at 12:12:49.798922 after 2.27 seconds
+[0m12:12:49.799358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ce52b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107afddc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107afc860>]}
+[0m12:12:49.799676 [debug] [MainThread]: Flushing usage events
+[0m12:16:01.958595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106d45340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105dc1f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106db4fb0>]}
+
+
+============================== 12:16:01.961120 | 0d44d16d-8da1-4213-aeb7-47fd04e1406f ==============================
+[0m12:16:01.961120 [info ] [MainThread]: Running with dbt=1.7.7
+[0m12:16:01.961461 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:16:02.134219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107791430>]}
+[0m12:16:02.168620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063e7ef0>]}
+[0m12:16:02.169021 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m12:16:02.176185 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m12:16:02.218683 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:16:02.218933 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:16:02.221744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1079b6b40>]}
+[0m12:16:02.225475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c60b00>]}
+[0m12:16:02.225697 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m12:16:02.225887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c61010>]}
+[0m12:16:02.226670 [info ] [MainThread]: 
+[0m12:16:02.227083 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:16:02.227619 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_astrafy-sandbox-victor'
+[0m12:16:02.227852 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:16:02.730914 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor, now list_astrafy-sandbox-victor_dbt_testing_dataset)
+[0m12:16:02.731910 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:16:03.077004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c618e0>]}
+[0m12:16:03.079799 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:16:03.080368 [info ] [MainThread]: 
+[0m12:16:03.083678 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_first_dbt_model
+[0m12:16:03.084447 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_testing_dataset.my_first_dbt_model ............ [RUN]
+[0m12:16:03.085441 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor_dbt_testing_dataset, now model.dbt_core_demo.my_first_dbt_model)
+[0m12:16:03.085929 [debug] [Thread-1 (]: Began compiling node model.dbt_core_demo.my_first_dbt_model
+[0m12:16:03.094367 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_core_demo.my_first_dbt_model"
+[0m12:16:03.095295 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (compile): 12:16:03.086236 => 12:16:03.095049
+[0m12:16:03.095672 [debug] [Thread-1 (]: Began executing node model.dbt_core_demo.my_first_dbt_model
+[0m12:16:03.127575 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_core_demo.my_first_dbt_model"
+[0m12:16:03.128051 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:16:03.129010 [debug] [Thread-1 (]: On model.dbt_core_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m12:16:03.857658 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:1afa3a14-5c29-4259-8185-1143999131ba&page=queryresults
+[0m12:16:05.677768 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (execute): 12:16:03.095865 => 12:16:05.677552
+[0m12:16:05.678514 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10646b200>]}
+[0m12:16:05.679034 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_testing_dataset.my_first_dbt_model ....... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.59s]
+[0m12:16:05.679518 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_first_dbt_model
+[0m12:16:05.680138 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_second_dbt_model
+[0m12:16:05.680537 [info ] [Thread-1 (]: 2 of 2 START sql view model dbt_testing_dataset.my_second_dbt_model ............ [RUN]
+[0m12:16:05.681108 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_core_demo.my_first_dbt_model, now model.dbt_core_demo.my_second_dbt_model)
+[0m12:16:05.681388 [debug] [Thread-1 (]: Began compiling node model.dbt_core_demo.my_second_dbt_model
+[0m12:16:05.683676 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_core_demo.my_second_dbt_model"
+[0m12:16:05.684322 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_second_dbt_model (compile): 12:16:05.681554 => 12:16:05.684167
+[0m12:16:05.684601 [debug] [Thread-1 (]: Began executing node model.dbt_core_demo.my_second_dbt_model
+[0m12:16:05.696856 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_core_demo.my_second_dbt_model"
+[0m12:16:05.697291 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:16:05.698297 [debug] [Thread-1 (]: On model.dbt_core_demo.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_second_dbt_model"} */
+
+
+  create or replace view `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m12:16:06.245100 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:1db544e3-6c5f-4293-9795-7674e567aab8&page=queryresults
+[0m12:16:06.517415 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_second_dbt_model (execute): 12:16:05.684765 => 12:16:06.517027
+[0m12:16:06.518848 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d44d16d-8da1-4213-aeb7-47fd04e1406f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ddf740>]}
+[0m12:16:06.519818 [info ] [Thread-1 (]: 2 of 2 OK created sql view model dbt_testing_dataset.my_second_dbt_model ....... [[32mCREATE VIEW (0 processed)[0m in 0.84s]
+[0m12:16:06.520742 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_second_dbt_model
+[0m12:16:06.523071 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:16:06.523542 [debug] [MainThread]: Connection 'model.dbt_core_demo.my_second_dbt_model' was properly closed.
+[0m12:16:06.523987 [info ] [MainThread]: 
+[0m12:16:06.524421 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.30 seconds (4.30s).
+[0m12:16:06.525622 [debug] [MainThread]: Command end result
+[0m12:16:06.534381 [info ] [MainThread]: 
+[0m12:16:06.534830 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:16:06.535167 [info ] [MainThread]: 
+[0m12:16:06.535520 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:16:06.536796 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.600035, "process_user_time": 1.468522, "process_kernel_time": 0.115858, "process_mem_max_rss": "142901248", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m12:16:06.537354 [debug] [MainThread]: Command `dbt run` succeeded at 12:16:06.537213 after 4.60 seconds
+[0m12:16:06.537758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10601d5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10646b200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107afd760>]}
+[0m12:16:06.538155 [debug] [MainThread]: Flushing usage events
+[0m14:21:37.640018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1073e91f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10726a720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10745cb90>]}
+
+
+============================== 14:21:37.642968 | ebe1bc52-355a-4e13-98d3-b76d52c676f5 ==============================
+[0m14:21:37.642968 [info ] [MainThread]: Running with dbt=1.7.7
+[0m14:21:37.643329 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:21:37.643710 [info ] [MainThread]: dbt version: 1.7.7
+[0m14:21:37.643869 [info ] [MainThread]: python version: 3.12.2
+[0m14:21:37.644006 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+[0m14:21:37.644140 [info ] [MainThread]: os info: macOS-12.5-arm64-arm-64bit
+[0m14:21:38.185029 [info ] [MainThread]: Using profiles dir at /Users/victorberrozpe/.dbt
+[0m14:21:38.185311 [info ] [MainThread]: Using profiles.yml file at /Users/victorberrozpe/.dbt/profiles.yml
+[0m14:21:38.185478 [info ] [MainThread]: Using dbt_project.yml file at /Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/dbt_project.yml
+[0m14:21:38.185723 [info ] [MainThread]: adapter type: bigquery
+[0m14:21:38.185873 [info ] [MainThread]: adapter version: 1.7.4
+[0m14:21:38.216113 [info ] [MainThread]: Configuration:
+[0m14:21:38.216315 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:21:38.216468 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:21:38.216606 [info ] [MainThread]: Required dependencies:
+[0m14:21:38.216776 [debug] [MainThread]: Executing "git --help"
+[0m14:21:38.225439 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:21:38.225954 [debug] [MainThread]: STDERR: "b''"
+[0m14:21:38.226151 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:21:38.226353 [info ] [MainThread]: Connection:
+[0m14:21:38.226554 [info ] [MainThread]:   method: service-account
+[0m14:21:38.226699 [info ] [MainThread]:   database: astrafy-sandbox-victor
+[0m14:21:38.226827 [info ] [MainThread]:   execution_project: astrafy-sandbox-victor
+[0m14:21:38.226950 [info ] [MainThread]:   schema: dbt_testing_dataset
+[0m14:21:38.227073 [info ] [MainThread]:   location: europe-west1
+[0m14:21:38.227201 [info ] [MainThread]:   priority: interactive
+[0m14:21:38.227325 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:21:38.227445 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:21:38.227568 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:21:38.227688 [info ] [MainThread]:   job_retries: 1
+[0m14:21:38.227832 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:21:38.227966 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:21:38.228089 [info ] [MainThread]:   keyfile: /Users/victorberrozpe/Documents/service account keys/astrafy-sandbox-victor-8d0687c06102.json
+[0m14:21:38.228209 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:21:38.228335 [info ] [MainThread]:   refresh_token: None
+[0m14:21:38.228454 [info ] [MainThread]:   client_id: None
+[0m14:21:38.228574 [info ] [MainThread]:   token_uri: None
+[0m14:21:38.228700 [info ] [MainThread]:   dataproc_region: None
+[0m14:21:38.228820 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:21:38.228941 [info ] [MainThread]:   gcs_bucket: None
+[0m14:21:38.229059 [info ] [MainThread]:   dataproc_batch: None
+[0m14:21:38.229293 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m14:21:38.233563 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:21:38.234114 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:21:38.235686 [debug] [MainThread]: On debug: select 1 as id
+[0m14:21:38.840421 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:ed1c6b0b-7c66-4f45-817f-45de60979d67&page=queryresults
+[0m14:21:39.254064 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:21:39.255823 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:21:39.260310 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.6434206, "process_user_time": 1.053817, "process_kernel_time": 0.098234, "process_mem_max_rss": "134938624", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m14:21:39.261301 [debug] [MainThread]: Command `dbt debug` succeeded at 14:21:39.261098 after 1.64 seconds
+[0m14:21:39.261864 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:21:39.262349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072683e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b28140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1080fda30>]}
+[0m14:21:39.263035 [debug] [MainThread]: Flushing usage events
+[0m14:21:49.886730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051c91f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104279f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10544cd70>]}
+
+
+============================== 14:21:49.889132 | 54f6114c-0c8e-422b-9b8e-2f3032be9e5f ==============================
+[0m14:21:49.889132 [info ] [MainThread]: Running with dbt=1.7.7
+[0m14:21:49.889452 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/victorberrozpe/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/victorberrozpe/Documents/DBT testing/dbt_core_demo/dbt_core_demo/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:21:50.064639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061c6570>]}
+[0m14:21:50.098170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10629afc0>]}
+[0m14:21:50.098494 [info ] [MainThread]: Registered adapter: bigquery=1.7.4
+[0m14:21:50.105615 [debug] [MainThread]: checksum: 54188551c516f4dd1c42b8d9c289f2bf49f18ae42632e2ba36a64ad29fd60da4, vars: {}, profile: , target: , version: 1.7.7
+[0m14:21:50.150682 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:21:50.150930 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:21:50.153697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d66180>]}
+[0m14:21:50.158835 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106350a70>]}
+[0m14:21:50.159062 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m14:21:50.159251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1053d9280>]}
+[0m14:21:50.160044 [info ] [MainThread]: 
+[0m14:21:50.160436 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:21:50.160987 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_astrafy-sandbox-victor'
+[0m14:21:50.161198 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:21:50.589117 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor, now list_astrafy-sandbox-victor_dbt_testing_dataset)
+[0m14:21:50.589768 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:21:50.996852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105ba00b0>]}
+[0m14:21:50.999482 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:21:51.000475 [info ] [MainThread]: 
+[0m14:21:51.004380 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_first_dbt_model
+[0m14:21:51.005107 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_testing_dataset.my_first_dbt_model ............ [RUN]
+[0m14:21:51.006066 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_astrafy-sandbox-victor_dbt_testing_dataset, now model.dbt_core_demo.my_first_dbt_model)
+[0m14:21:51.006550 [debug] [Thread-1 (]: Began compiling node model.dbt_core_demo.my_first_dbt_model
+[0m14:21:51.014455 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_core_demo.my_first_dbt_model"
+[0m14:21:51.015240 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (compile): 14:21:51.006852 => 14:21:51.015011
+[0m14:21:51.015598 [debug] [Thread-1 (]: Began executing node model.dbt_core_demo.my_first_dbt_model
+[0m14:21:51.028049 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:51.498014 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_core_demo.my_first_dbt_model"
+[0m14:21:51.498546 [debug] [Thread-1 (]: On model.dbt_core_demo.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m14:21:51.802469 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:c7bba0a2-c064-4e0d-a615-5a12acbe5936&page=queryresults
+[0m14:21:53.601391 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_first_dbt_model (execute): 14:21:51.015793 => 14:21:53.601138
+[0m14:21:53.602328 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105f783b0>]}
+[0m14:21:53.602945 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_testing_dataset.my_first_dbt_model ....... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 2.60s]
+[0m14:21:53.603516 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_first_dbt_model
+[0m14:21:53.604285 [debug] [Thread-1 (]: Began running node model.dbt_core_demo.my_second_dbt_model
+[0m14:21:53.604623 [info ] [Thread-1 (]: 2 of 2 START sql view model dbt_testing_dataset.my_second_dbt_model ............ [RUN]
+[0m14:21:53.605153 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_core_demo.my_first_dbt_model, now model.dbt_core_demo.my_second_dbt_model)
+[0m14:21:53.605428 [debug] [Thread-1 (]: Began compiling node model.dbt_core_demo.my_second_dbt_model
+[0m14:21:53.607817 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_core_demo.my_second_dbt_model"
+[0m14:21:53.609316 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_second_dbt_model (compile): 14:21:53.605595 => 14:21:53.609142
+[0m14:21:53.609606 [debug] [Thread-1 (]: Began executing node model.dbt_core_demo.my_second_dbt_model
+[0m14:21:53.623107 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_core_demo.my_second_dbt_model"
+[0m14:21:53.623621 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:21:53.624622 [debug] [Thread-1 (]: On model.dbt_core_demo.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.7", "profile_name": "dbt_core_demo", "target_name": "dev", "node_id": "model.dbt_core_demo.my_second_dbt_model"} */
+
+
+  create or replace view `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `astrafy-sandbox-victor`.`dbt_testing_dataset`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m14:21:54.224122 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=astrafy-sandbox-victor&j=bq:europe-west1:5d56f71b-1b0a-4465-bb2d-923405a811a1&page=queryresults
+[0m14:21:54.499621 [debug] [Thread-1 (]: Timing info for model.dbt_core_demo.my_second_dbt_model (execute): 14:21:53.609775 => 14:21:54.499385
+[0m14:21:54.500472 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '54f6114c-0c8e-422b-9b8e-2f3032be9e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106326870>]}
+[0m14:21:54.501007 [info ] [Thread-1 (]: 2 of 2 OK created sql view model dbt_testing_dataset.my_second_dbt_model ....... [[32mCREATE VIEW (0 processed)[0m in 0.90s]
+[0m14:21:54.501523 [debug] [Thread-1 (]: Finished running node model.dbt_core_demo.my_second_dbt_model
+[0m14:21:54.503002 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:21:54.503254 [debug] [MainThread]: Connection 'model.dbt_core_demo.my_second_dbt_model' was properly closed.
+[0m14:21:54.503505 [info ] [MainThread]: 
+[0m14:21:54.503784 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.34 seconds (4.34s).
+[0m14:21:54.504400 [debug] [MainThread]: Command end result
+[0m14:21:54.509477 [info ] [MainThread]: 
+[0m14:21:54.509753 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:21:54.509966 [info ] [MainThread]: 
+[0m14:21:54.510182 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m14:21:54.510909 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.6457543, "process_user_time": 1.487651, "process_kernel_time": 0.113162, "process_mem_max_rss": "144130048", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m14:21:54.511236 [debug] [MainThread]: Command `dbt run` succeeded at 14:21:54.511157 after 4.65 seconds
+[0m14:21:54.511486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10544cd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b18080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106405040>]}
+[0m14:21:54.511728 [debug] [MainThread]: Flushing usage events
